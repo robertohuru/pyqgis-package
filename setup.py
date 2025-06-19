@@ -23,7 +23,11 @@ setup(
         "Programming Language :: Python :: 3.10",
     ],
     keywords="python package qgis",
-    packages=find_packages(exclude=["tests", "tests.*"]),
+    packages=find_packages(
+        exclude=[
+            "tests", "tests.*", "docker-compose.yml",
+            "test_suite.py"
+        ]),
     package_data={"pyqgis_package": ["version.json", "data/**"]},
     include_package_data=True,
     install_requires=[],
