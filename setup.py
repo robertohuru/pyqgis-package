@@ -26,7 +26,7 @@ setup(
     packages=find_packages(
         exclude=[
             "tests", "tests.*", "docker-compose.yml",
-            "test_suite.py"
+            "test_suite.py", "scripts", "scripts.*",
         ]),
     package_data={"pyqgis_package": ["version.json", "data/**"]},
     include_package_data=True,
