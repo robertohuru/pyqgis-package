@@ -6,12 +6,16 @@ on:
     paths: ['pyqgis_package/version.json']  # Only trigger on version changes
 
 jobs:
-  build-and-release:
+  release:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout code
         id: checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Extract version
         id: version
